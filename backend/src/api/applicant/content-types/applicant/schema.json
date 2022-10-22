@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applicants",
+  "info": {
+    "singularName": "applicant",
+    "pluralName": "applicants",
+    "displayName": "applicants",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Surname": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Number": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Cv": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Position": {
+      "type": "enumeration",
+      "enum": [
+        "Javascript",
+        ".Net",
+        "DigitalMarketing",
+        "Intern"
+      ],
+      "required": true
+    }
+  }
+}
